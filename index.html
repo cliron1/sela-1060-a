@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html { font-size: 10px; }
+        form p {
+            background-color: lemonchiffon;
+        }
+        p.magnify {
+            font-size: 1.2rem;
+        }
+        form input, form textarea, form select {
+            font-size: 1rem;
+            background-color: #cfcfcf;
+        }
+        section p {
+            background-color: lightcoral;
+        }
+
+        .name { border: 2px dashed green; }
+
+        .name.required { border-color: red; }
+       
+
+        form span {
+            display: inline-block;
+            width: 5rem;
+            padding-right: 10px;
+        }
+
+        form .required span {
+            position: relative;
+        }
+
+        form .required span::after {
+            content: '*';
+            color: red;
+            position: absolute;
+            right: 0;
+        }
+        #p1 { color: #fff; }
+
+        input[type~="el"] { font-weight: bold; }
+    </style>
+</head>
+
+<body>
+    <form>
+        <p id="p1">
+            <label class="required name">
+                <span>First Name:</span>
+                <input type="text" required />
+            </label>
+        </p>
+        <p id="p2">
+            <label class="name">
+                <span>Last Name:</span>
+                <input type="text" required />
+            </label>
+        </p>
+        </p>
+        <p id="p3">
+            <label>
+                <span>Mobile:</span>
+                <input type="tel" />
+            </label>
+        </p>
+
+        <textarea maxlength="10" minlength="2" cols="30" rows="7"></textarea>
+
+        <button type="submit" class="btn">Click to submit</button>
+    </form>
+
+    <section>
+        <h2>Article</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi alias cumque similique provident maxime non
+            ad quod soluta eveniet pariatur et quasi facilis odio fuga dolorum, repellat quam illo impedit!</p>
+        <p>Lorem ipsum <span class="bold underline strike">dolor</span> sit amet consectetur adipisicing elit. Commodi alias cumque similique provident maxime non
+            ad quod soluta eveniet pariatur et quasi facilis odio fuga dolorum, repellat quam illo impedit!</p>
+        <p class="magnify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi alias cumque similique provident maxime non
+            ad quod soluta eveniet pariatur et quasi facilis odio fuga dolorum, repellat quam illo impedit!</p>
+        </section>
+</body>
+
+</html>
