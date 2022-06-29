@@ -1,0 +1,7 @@
+#bob {
+    background-color: red;
+}
+
+.brown {
+    background: yellow url() no-repeat left top;
+}
